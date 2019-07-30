@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>Home | Ilaaj.com</title>
+        <script src=".js/sign_up.js"></script>
+        <link rel="stylesheet" href=".css/sign_up.css">
+    </head>
+    <body>
+        <div class="main header">
+            <span class="navbar" align=right>
+                <span class="nav">Home</span>
+                <span class="nav">Find a Doctor</span>
+                <span class="nav">Find a Medicine</span>
+                <span class="nav">Admin Portal</span>
+            </span>
+            <br>
+            <h1>Ilaaj.com</h1>
+        </div>
+        
+        <div id="main" >
+            <div class="header">
+                Sign Up Form
+            </div>
+            <form action=".php/sign_up.php" method="GET" onsubmit="return checkForm(this);">
+                <table align="center">
+                    <tr>
+                        <td colspan="4"><div id="misc"><i><b>Personal Information</b></i></div></td>
+                    </tr>
+                    <tr><td>First Name:<span class="required">*</span></td>
+                        <td><input type="text" placeholder="First Name" name="first_name" id="fname" required></td>     
+                            
+                    <td>Last Name:</td>
+                        <td><input type="text" placeholder="Last Name" name="last_name" id="lname"></td>                    
+                    </tr>
+                    <tr>
+                        <td colspan="4"><div id="misc"><i><b>Validation Details</b></i></div></td>
+                    </tr>
+                    <tr><td>Username<span class="required">*</span></td>
+                        <td><input type="text" maxlength="12" minlength="6" placeholder="Username" name="username" id="uname" required></td>                   
+                    </tr>
+                    <tr><td>Password:<span class="required">*</span></td>
+                        <td><input type="password" maxlength="12" minlength="6" placeholder="Password" name="password" id="pwd" required></td>
+                        <td>Confirm Password:</td>
+                        <td><input type="password" placeholder="Confirm Password" name="c_password" id="c_pwd"></td>                    
+                    </tr>
+                    <tr>
+                        <td colspan="4"><div id="misc"><i><b>Contact Details</b></i></div></td>
+                    </tr>
+                    <tr><td>Mobile No.<span class="required">*</span></td>
+                        <td><input type="number" placeholder="Mobile Number" name="cell"></td>
+                        <td>Email Address<span class="required">*</span></td>
+                        <td><input type="email" placeholder="Email Address" name="email" required></td>                    
+                    </tr>
+                    <tr>
+                        <td colspan="4" align="center"><div id="misc" align="center"><i><b>Misc.</b></i></div></td>
+                    </tr>
+                    <tr>
+                        <td>Province:<span class="required">*</span></td>
+                        <td>
+                            <select id="countrySelect" name="province" size="1" onchange="makeSubmenu(this.value)" required>
+                                <option value="" disabled selected>Choose Province</option>
+                                <option value="Sindh" >Sindh</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Balochistan">Balochistan</option>
+                                <option value="KPK">KPK</option>
+                                <option>Former - FATA</option>
+                            </select>
+                        </td>
+                        <td>City</td>
+                        <td>
+                            <select id="citySelect" name="city" >
+                                <option value="" disabled selected>Choose City</option>
+                                <option></option>
+                            </select>
+                        </td>                    
+                    </tr>
+                    <tr><td>Gender:</td>
+                        <td><label><input type="radio" name="gender" value="Male" >Male</label>
+                            <label><input type="radio" name="gender" value="Female">Female</label>
+                        </td>
+                        <td align="up">Languages:</td>
+                        <td><label><input type="checkbox" name="lang[]" value="English">English</label>
+                            <label><input type="checkbox" name="lang[]" value="Sindhi">Sindhi</label><br>
+                            <label><input type="checkbox" name="lang[]" value="Urdu">Urdu</label>
+                            <input type="submit" value="Proceed" >
+                            <input type="reset" value="Clear" class="clear" onclick="clear()">
+                        </td>                    
+                    </tr>
+                </table>
+            </form>
+        </div>
+<footer>Ilaaj.com</footer>
+
+   </body>
+</html>
+
