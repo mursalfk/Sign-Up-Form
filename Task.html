@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Lab 3 | Task 3</title>
+        <script src="Task.js"></script>
+        <link rel="stylesheet" href="Task.css">
+    </head>
+    <body id="main" onload="reset()">
+        <div class="header">
+            <h1>Sign Up Form</h1>
+        </div>
+        <form action="Task.php" method="GET" onsubmit="return checkForm(this);">
+            <div class="main2">
+            <table align="center">
+                <tr>
+                    <td colspan="4"><div id="misc"><i><b>Personal Information</b></i></div></td>
+                </tr>
+                <tr><td>First Name:<span class="required">*</span></td>
+                    <td><input type="text" placeholder="First Name" name="first_name" id="fname" required></td>     
+                </tr>
+                <tr>               
+                <td>Last Name:</td>
+                    <td><input type="text" placeholder="Last Name" name="last_name" id="lname"></td>                    
+                </tr>
+                <tr>
+                    <td colspan="4"><div id="misc"><i><b>Validation Details</b></i></div></td>
+                </tr>
+                <tr><td>Username<span class="required">*</span></td>
+                    <td><input type="text" maxlength="12" minlength="6" placeholder="Username" name="username" id="uname" required></td>                   
+                </tr>
+
+                <tr><td>Password:<span class="required">*</span></td>
+                    <td><input type="password" maxlength="12" minlength="6" placeholder="Password" name="password" id="pwd" required></td>                    
+                </tr>
+                <tr>
+                    <td>Confirm Password:</td>
+                    <td><input type="password" placeholder="Confirm Password" name="c_password" id="c_pwd"></td>                    
+                </tr>
+                <tr>
+                    <td colspan="4"><div id="misc"><i><b>Contact Details</b></i></div></td>
+                </tr>
+                <tr><td>Mobile No.<span class="required">*</span></td>
+                    <td><input type="number" placeholder="Mobile Number" name="cell"></td>                    
+                </tr>
+                <tr>
+                    <td>Email Address<span class="required">*</span></td>
+                    <td><input type="email" placeholder="Email Address" name="email" required></td>                    
+                </tr>
+                <tr>
+                    <td colspan="4" align="center"><div id="misc" align="center"><i><b>Misc.</b></i></div></td>
+                </tr>
+                <tr>
+                    <td>Province:<span class="required">*</span></td>
+                    <td>
+                        <select id="countrySelect" name="province" size="1" onchange="makeSubmenu(this.value)" required>
+                            <option value="" disabled selected>Choose Province</option>
+                            <option value="Sindh" >Sindh</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Balochistan">Balochistan</option>
+                            <option value="KPK">KPK</option>
+                            <option>Former - FATA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>
+                        <select id="citySelect" name="city" >
+                            <option value="" disabled selected>Choose City</option>
+                            <option></option>
+                        </select>
+                    </td>                    
+                </tr>
+                <tr><td>Gender:</td>
+                    <td><label><input type="radio" name="gender" value="Male" >Male</label>
+                        <label><input type="radio" name="gender" value="Female">Female</label>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td align="up">Languages:</td>
+                    <td><label><input type="checkbox" name="lang[]" value="English">English</label>
+                        <label><input type="checkbox" name="lang[]" value="Sindhi">Sindhi</label><br>
+                        <label><input type="checkbox" name="lang[]" value="Urdu">Urdu</label>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td><input type="reset" value="Clear" class="clear" onclick="clear()"></td>
+                    <td height="50px" colspan="1" align="right">
+                        <input type="submit" value="Proceed" >
+                    </td>
+                </tr>   
+                
+            </table>
+        </form>
+    </div>
+    <footer>Designed by: Mursal Furqan</footer>
+   </body>
+</html>
+
